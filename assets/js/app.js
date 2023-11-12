@@ -1,2 +1,2 @@
-let cl = console.log;
-alert("hello")
+// let cl = console.log;
+// alert("hello")
