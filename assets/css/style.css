@@ -175,7 +175,7 @@
                 align-self: center;
                 padding: 25px;
             }
-            .watch-card :nth-of-type(2) .watch-img {
+            .watch-card:nth-of-type(2) .watch-img {
                 order: 1;
             }
         }
