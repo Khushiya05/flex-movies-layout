@@ -1,215 +1,290 @@
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
-        
-        @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
-        body {
-            background-color: var(--color-grey);
-            color: var(--color-dark);
-            line-height: 1.5;
-            font-family: 'Asap', sans-serif;
-        }
-        
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        /*---------------------------------------------header section start----------------------------------*/
-        
-        .header {
-            background-color: var(--color-dark);
-            color: var(--color-white);
-            height: 400px;
-            display: flex;
-        }
-        
-        .header h1 {
-            text-transform: uppercase;
-        }
-        
-        .header p {
-            font-style: italic;
-        }
-        
-        .navbar {
-            background-color: var(--color-primary);
-        }
-        
-        .siteinfo {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .navbar ul li a:link,
-        .navbar ul li a:visited {
-            text-transform: capitalize;
-            background-color: var(--color-primary);
-            color: var(--color-dark);
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            display: block;
-            padding: 10px;
-            transition: all .5s ease-in-out;
-        }
-        
-        .navbar ul li a:hover,
-        .navbar ul li a:focus,
-        .navbar ul li a:active {
-            background-color: var(--color-dark);
-            color: var(--color-primary);
-        }
-        /*------------------------------------------------------section containt main----------------------------------*/
-        
-        .content-main {
-            flex-direction: column;
-        }
-        
-        .mainArea {
-            padding: 10px;
-        }
-        
-        .sidebar-section {
-            border: 2px solid black;
-        }
-        /*---------------------css for posts-------------------------------------------------*/
-        
-        .posts {
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
-        }
-        
-        .post {
-            background-color: var(--color-white);
-            margin-bottom: 20px;
-        }
-        
-        .post img {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-        }
-        
-        .post h2 {
-            padding: 20px;
-            text-align: center;
-            background-color: var(--color-primary);
-            color: var(--color-dark);
-            text-transform: capitalize;
-        }
-        
-        .post-content {
-            transform: translateY(-10px);
-        }
-        
-        .post-content p {
-            padding: 25px;
-            color: var(--color-dark);
-        }
-        /*-------------------------------css for watchNow Section-----------------------------*/
-        
-        .watch-card {
-            background-color: var(--color-dark);
-            color: var(--color-white);
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .watch-img>img {
-            width: 100%;
-        }
-        
-        .watch-content {
-            padding: 20px;
-            font-weight: bold;
-        }
-        
-        .watch-content h3 {
-            font-weight: 400;
-            text-transform: capitalize;
-            font-size: 32px;
-        }
-        
-        .watch-content h3,
-        .watch-content p {
-            margin-bottom: 20px;
-        }
-        
-        .watch-content a {
-            text-decoration: underline;
-            color: var(--color-white);
-        }
-        
-        .watch-content p span {
-            margin-right: 10px;
-            font-size: 19px;
-        }
-        /*-------------------------------------for Tab-----------------------------------------*/
-        
-        @media all and (min-width: 768px) {
-            .posts {
-                flex-direction: row;
-                justify-content: space-between;
-            }
-            .posts .post {
-                width: 49%;
-            }
-            .watch-card {
-                flex-direction: row;
-            }
-            .watch-img>img {
-                height: 100%;
-                object-fit: cover;
-            }
-            .watch-img {
-                flex: 0 0 400px;
-            }
-            .watch-content {
-                align-self: center;
-                padding: 25px;
-            }
-            .watch-card:nth-of-type(2) .watch-img {
-                order: 1;
-            }
-        }
-        
-        @media all and (min-width: 1180px) {
-            .navbar ul {
-                display: flex;
-            }
-            .navbar li {
-                flex-grow: 1;
-            }
-            .content-main,
-            .posts {
-                flex-direction: row;
-            }
-            .mainArea {
-                flex-grow: 1;
-            }
-            .sidebar-section {
-                flex: 0 0 400px;
-            }
-            /* .posts {
+                    * {
+                        padding: 0;
+                        margin: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+                    body {
+                        background-color: var(--color-grey);
+                        color: var(--color-dark);
+                        line-height: 1.5;
+                        font-family: 'Asap', sans-serif;
+                    }
+                    
+                    .row {
+                        display: flex;
+                        flex-wrap: wrap;
+                    }
+                    /*---------------------------------------------header section start----------------------------------*/
+                    
+                    .header {
+                        background-color: var(--color-dark);
+                        color: var(--color-white);
+                        height: 400px;
+                        display: flex;
+                    }
+                    
+                    .header h1 {
+                        text-transform: uppercase;
+                    }
+                    
+                    .header p {
+                        font-style: italic;
+                    }
+                    
+                    .navbar {
+                        background-color: var(--color-primary);
+                    }
+                    
+                    .siteinfo {
+                        flex-grow: 1;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    
+                    .navbar ul li a:link,
+                    .navbar ul li a:visited {
+                        text-transform: capitalize;
+                        background-color: var(--color-primary);
+                        color: var(--color-dark);
+                        text-align: center;
+                        font-size: 24px;
+                        font-weight: bold;
+                        display: block;
+                        padding: 10px;
+                        transition: all .5s ease-in-out;
+                    }
+                    
+                    .navbar ul li a:hover,
+                    .navbar ul li a:focus,
+                    .navbar ul li a:active {
+                        background-color: var(--color-dark);
+                        color: var(--color-primary);
+                    }
+                    /*------------------------------------------------------section containt main----------------------------------*/
+                    
+                    .content-main {
+                        flex-direction: column;
+                    }
+                    
+                    .mainArea {
+                        padding: 10px;
+                    }
+                    
+                    .sidebar-section {
+                        border: 2px solid black;
+                    }
+                    /*---------------------css for posts-------------------------------------------------*/
+                    
+                    .posts {
+                        display: flex;
+                        flex-direction: column;
+                        flex-wrap: wrap;
+                    }
+                    
+                    .post {
+                        background-color: var(--color-white);
+                        margin-bottom: 20px;
+                    }
+                    
+                    .post img {
+                        width: 100%;
+                        height: 350px;
+                        object-fit: cover;
+                    }
+                    
+                    .post h2 {
+                        padding: 20px;
+                        text-align: center;
+                        background-color: var(--color-primary);
+                        color: var(--color-dark);
+                        text-transform: capitalize;
+                    }
+                    
+                    .post-content {
+                        transform: translateY(-10px);
+                    }
+                    
+                    .post-content p {
+                        padding: 25px;
+                        color: var(--color-dark);
+                    }
+                    /*-------------------------------css for watchNow Section-----------------------------*/
+                    
+                    .watch-card {
+                        background-color: var(--color-dark);
+                        color: var(--color-white);
+                        margin-bottom: 20px;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    .watch-img>img {
+                        width: 100%;
+                    }
+                    
+                    .watch-content {
+                        padding: 20px;
+                        font-weight: bold;
+                    }
+                    
+                    .watch-content h3 {
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        font-size: 32px;
+                    }
+                    
+                    .watch-content h3,
+                    .watch-content p {
+                        margin-bottom: 20px;
+                    }
+                    
+                    .watch-content a {
+                        text-decoration: underline;
+                        color: var(--color-white);
+                    }
+                    
+                    .watch-content p span {
+                        margin-right: 10px;
+                        font-size: 19px;
+                    }
+                    /*-------------------------------------------css for download section-------------------------------*/
+                    
+                    .download-img img {
+                        width: 100%;
+                    }
+                    
+                    .download-content {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                    
+                    .download-img {
+                        background-color: var(--color-dark);
+                    }
+                    
+                    .download-link {
+                        padding: 20px;
+                        background-color: var(--color-dark);
+                        color: var(--color-white);
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    
+                    .download-info {
+                        background-color: var(--color-white);
+                        padding: 20px 5px;
+                    }
+                    
+                    .download-genere {
+                        display: flex;
+                    }
+                    
+                    .download-cast {
+                        display: flex;
+                    }
+                    
+                    .download-cast h4,
+                    .download-genere h4 {
+                        flex: 0 0 55px;
+                        text-transform: capitalize;
+                        font-size: 15px;
+                        align-self: center;
+                    }
+                    
+                    .download-genere {
+                        margin-bottom: 15px;
+                    }
+                    
+                    .download-cast img {
+                        width: 40px;
+                        border-radius: 50%;
+                        margin-right: 5px;
+                    }
+                    
+                    .download-rating {
+                        background-color: var(--color-primary);
+                        display: flex;
+                        padding: 20px;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    /*-------------------------------------for Tab-----------------------------------------*/
+                    
+                    @media all and (min-width: 768px) {
+                        .posts {
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+                        .posts .post {
+                            width: 49%;
+                        }
+                        .watch-card {
+                            flex-direction: row;
+                        }
+                        .watch-img>img {
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        .watch-img {
+                            flex: 0 0 400px;
+                        }
+                        .watch-content {
+                            align-self: center;
+                            padding: 25px;
+                        }
+                        .watch-card:nth-of-type(2) .watch-img {
+                            order: 1;
+                        }
+                        .download-content {
+                            flex-direction: row;
+                        }
+                        .download-info {
+                            padding: 20px;
+                            flex-grow: 1;
+                        }
+                        .download-link,
+                        .download-rating {
+                            flex: 0 0 200px;
+                        }
+                    }
+                    
+                    @media all and (min-width: 1180px) {
+                        .navbar ul {
+                            display: flex;
+                        }
+                        .navbar li {
+                            flex-grow: 1;
+                        }
+                        .content-main,
+                        .posts {
+                            flex-direction: row;
+                        }
+                        .mainArea {
+                            flex-grow: 1;
+                        }
+                        .sidebar-section {
+                            flex: 0 0 400px;
+                        }
+                        /* .posts {
             justify-content: space-between;
         } */
-            .posts .post:nth-child(1),
-            .posts .post:nth-child(2) {
-                width: 49%;
-            }
-            .posts .post:nth-child(3),
-            .posts .post:nth-child(4),
-            .posts .post:nth-child(5) {
-                width: 32%;
-            }
-            .posts .post:last-child {
-                width: 100%;
-            }
-        }
+                        .posts .post:nth-child(1),
+                        .posts .post:nth-child(2) {
+                            width: 49%;
+                        }
+                        .posts .post:nth-child(3),
+                        .posts .post:nth-child(4),
+                        .posts .post:nth-child(5) {
+                            width: 32%;
+                        }
+                        .posts .post:last-child {
+                            width: 100%;
+                        }
+                    }
